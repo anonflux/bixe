@@ -4,10 +4,12 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const tagline = 'Performant, Simple, State Management';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'BiXE',
-  tagline: 'Performant, Simple State Management',
+  tagline,
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -61,8 +63,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        { name: 'keywords', content: 'redux, state management, framework agnostic, performant, rxjs' },
+        { name: 'description', content: tagline },
+        { name: 'og:description', content: tagline },
+      ],
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/bixe-social-card.jpg',
       navbar: {
         title: 'BiXE',
         logo: {

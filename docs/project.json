@@ -20,6 +20,14 @@
         "cwd": "docs"
       }
     },
+    "deploy:local": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "deploy:local",
+        "forwardAllArgs": true,
+        "cwd": "docs"
+      }
+    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],

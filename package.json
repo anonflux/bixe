@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "docs:start": "npx nx run docs:start",
+    "docs:build": "npx nx run docs:build",
     "harness:angular": "npx nx run harness/angular:serve"
   },
   "private": true,
