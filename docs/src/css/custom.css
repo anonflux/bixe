@@ -32,3 +32,24 @@
 .hero {
   background-image: url("/static/img/BixeBG_semi-transparent.png");
 }
+
+@font-face {
+  font-family: 'SpongeBoy';
+  src: url('/static/fonts/SpongeboyRegular-gx2n6.otf') format('opentype');
+}
+
+.hero__title, .navbar__title {
+  font-family: 'SpongeBoy' !important;
+}
+.hero__subtitle {
+  font-weight: 700;
+}
+.navbar__title {
+  font-size: 1.5em;
+  margin: 0.25em -0.5em 0 0.25em;
+}
+.navbar__logo{
+  display: none;
+}
+
+/* Both-end, Interoperable, eXstensible, Experience */

@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Store } from '@bixe/package';
+import { Store } from '@bixe/store';
 import { debounceTime, Subject, Subscription } from 'rxjs';
 
 import {

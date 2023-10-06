@@ -20,10 +20,10 @@
         "cwd": "docs"
       }
     },
-    "deploy:local": {
+    "deploy": {
       "executor": "nx:run-script",
       "options": {
-        "script": "deploy:local",
+        "script": "deploy",
         "forwardAllArgs": true,
         "cwd": "docs"
       }

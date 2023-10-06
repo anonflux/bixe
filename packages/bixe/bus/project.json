@@ -1,0 +1,48 @@
+{
+  "name": "bixe/bus",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/bixe/bus/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/bixe/bus",
+        "main": "packages/bixe/bus/src/index.ts",
+        "tsConfig": "packages/bixe/bus/tsconfig.lib.json",
+        "assets": ["packages/bixe/bus/*.md"],
+        "external": "all"
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs bixe/bus {args.ver} {args.otp} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/bixe/bus/**/*.ts",
+          "packages/bixe/bus/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/bixe/bus/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

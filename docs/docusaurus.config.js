@@ -4,7 +4,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const tagline = 'Performant, Simple, State Management';
+const tagline = 'An interoperable exstensible state management solution';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {

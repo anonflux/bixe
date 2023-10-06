@@ -1,4 +1,4 @@
-import { StoreConfig } from '@bixe/package';
+// import { StoreConfig } from '@bixe/store';
 import * as TodosActions from './actions';
 import * as TodosHandlers from './handlers';
 import { TodoState } from './state';

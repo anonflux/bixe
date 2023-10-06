@@ -17,8 +17,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@bixe/core": ["./packages/bixe/core/src/index.ts"],
+      "@bixe/action": ["./packages/bixe/action/src/index.ts"],
+      "@bixe/bus": ["./packages/bixe/bus/src/index.ts"],
+      "@bixe/context": ["./packages/bixe/context/src/index.ts"],
       "@bixe/harness/shared": ["./harness/shared/src/index.ts"],
-      "@bixe/package": ["./packages/bixe/src/index.ts"]
+      "@bixe/logger": ["./packages/bixe/logger/src/index.ts"],
+      "@bixe/store": ["./packages/bixe/store/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

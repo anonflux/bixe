@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, ResolveFn, RouterStateSnapshot } from '@angular/router';
-import { Store } from '@bixe/package';
+import { Store } from '@bixe/store';
 
 import { Observable, of } from 'rxjs';
 import { TodoState, TodoStoreGlobal, TodoStoreIsolated } from './store';

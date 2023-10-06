@@ -1,0 +1,47 @@
+{
+  "name": "bixe/core",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "bixe/core",
+  "projectType": "library",
+  "targets": {
+    "build-core": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/bixe/core",
+        "main": "packages/bixe/core/src/index.ts",
+        "tsConfig": "packages/bixe/core/tsconfig.lib.json",
+        "assets": ["packages/bixe/*.md"]
+      }
+    },
+    "publish-core": {
+      "command": "node tools/scripts/publish.mjs bixe/core {args.ver} {args.otp} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/bixe/**/*.ts",
+          "packages/bixe/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/bixe/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
